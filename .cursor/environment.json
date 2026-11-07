@@ -1,0 +1,9 @@
+{
+  "name": "earnings-templates",
+  "install": "if [ -f scripts/cloud-install.sh ]; then bash scripts/cloud-install.sh; else echo 'scripts/cloud-install.sh 不在此修订上，跳过依赖检查'; fi",
+  "start": "if [ -f scripts/cloud-start.sh ]; then bash scripts/cloud-start.sh; else echo 'scripts/cloud-start.sh 不在此修订上，跳过预览服务'; fi",
+  "ports": [
+    { "name": "static-preview", "port": 8765 }
+  ],
+  "chromeExecutablePath": "/usr/local/bin/google-chrome"
+}
